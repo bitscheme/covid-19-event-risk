@@ -37,7 +37,7 @@ calcRisk(
 ## Unit Test
 
 ```sh
-git clone https://github.com/@bitscheme/covid-19-event-risk
+git clone https://github.com/bitscheme/covid-19-event-risk
 cd covid-19-event-risk
 echo -e\
 "GCP_PROJECT_ID=my_gcp_project_id"\
