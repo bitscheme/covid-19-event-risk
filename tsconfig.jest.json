@@ -1,5 +1,0 @@
-{
-  "extends": "./tsconfig",
-  "include": ["__tests__/**/*.ts"],
-  "exclude": ["node_modules"]
-}
