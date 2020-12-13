@@ -23,7 +23,7 @@ type ResultRow = {
  * for historical and forecasted cases in the United States
  * @param level1 The state abbreviation
  * @param level2 The county
- * @param period The number of days in the infectious period
+ * @param period The number of days in the reporting window
  */
 export default async (
   bigQueryOptions: BigQueryOptions,
@@ -43,7 +43,7 @@ DECLARE fips_code DEFAULT (
   ) AND area_name = '${level2}'
 );
 
-DECLARE max_actual_date DEFAULT (
+DECLARE max_reported_date DEFAULT (
   SELECT
     MAX(date)
   FROM
@@ -54,7 +54,7 @@ DECLARE max_actual_date DEFAULT (
   )
 ;
 
--- get actuals
+-- get reported
 SELECT
   date,
   NULL AS forecast_date,
@@ -88,7 +88,7 @@ INNER JOIN
   \`bigquery-public-data.census_bureau_acs.county_2018_5yr\` b
 ON
   a.county_fips_code = fips_code
-  AND a.prediction_date > max_actual_date
+  AND a.prediction_date > max_reported_date
   AND a.county_fips_code = b.geo_id
   AND a.cumulative_confirmed IS NOT NULL
 ORDER BY
