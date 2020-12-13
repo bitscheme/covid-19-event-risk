@@ -4,12 +4,13 @@
   "parserOptions": { "project": "./tsconfig.eslint.json" },
   "env": { "es6": true },
   "ignorePatterns": ["node_modules", "build", "coverage"],
-  "plugins": ["import", "eslint-comments"],
+  "plugins": ["import", "eslint-comments", "jsdoc"],
   "extends": [
     "eslint:recommended",
     "plugin:eslint-comments/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:import/typescript",
+    "plugin:jsdoc/recommended",
     "prettier",
     "prettier/@typescript-eslint"
   ],
@@ -29,6 +30,8 @@
     "sort-imports": [
       "error",
       { "ignoreDeclarationSort": true, "ignoreCase": true }
-    ]
+    ],
+    "jsdoc/require-param-type": 0,
+    "jsdoc/require-returns-type": 0
   }
 }
