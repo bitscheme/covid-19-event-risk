@@ -54,10 +54,10 @@ export default async function ({
     throw new Error(`Unexpected row count=${rows.length}`)
   }
 
-  /**
-   * @param d The date
-   * @returns The row
-   */
+  const toMidnight = (d: Dayjs) => {
+    return d.set("h", 0).set("m", 0).set("s", 0).set("ms", 0)
+  }
+
   const bestAvailableDate = (d: Dayjs) => {
     // try for actual
     let res = rows.find(
@@ -72,12 +72,12 @@ export default async function ({
     return res
   }
 
-  const observationDate = dayjs(date)
-    .utc()
-    .set("h", 0)
-    .set("m", 0)
-    .set("s", 0)
-    .set("ms", 0)
+  const today = toMidnight(dayjs().utc())
+  const observationDate = toMidnight(dayjs(date).utc())
+
+  if (today > observationDate) {
+    throw new Error(`The observation date has already passed`)
+  }
 
   const latest = bestAvailableDate(observationDate)
 
