@@ -39,10 +39,10 @@ calcRisk(
 ```sh
 git clone https://github.com/bitscheme/covid-19-event-risk
 cd covid-19-event-risk
-echo -e\
-"GCP_PROJECT_ID=my_gcp_project_id"\
-"\n"\
-"GCP_KEY_FILE=/path/to/gcp_key_file.json" >> .env
+cat > .env <<- EOM
+GCP_PROJECT_ID=my_gcp_project_id
+GCP_KEY_FILE=/path/to/gcp_key_file.json
+EOM
 yarn
-yarn run test
+yarn test
 ```
