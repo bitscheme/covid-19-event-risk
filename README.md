@@ -1,8 +1,10 @@
 # COVID-19 Event Risk
 
-Estimates the chance (0-100%) that at least one COVID-19 positive individual will be present at an event on a given date. Historical and forecasted U.S. infection cases data is extracted from the [Google COVID-19 Open Data dataset](https://cloud.google.com/blog/products/data-analytics/free-public-datasets-for-covid19) using BigQuery.
+This repository provides a TypeScript module to estimate the chance (0-100%) that at least one COVID-19 positive individual will be present at an event on a given date.
 
-County population data taken from U.S. Census Bureau ACS 2018 5yr estimates.
+Historical and forecasted U.S. infection cases data are extracted from the [Google COVID-19 Open Data dataset](https://cloud.google.com/blog/products/data-analytics/free-public-datasets-for-covid19) using BigQuery.
+
+County population data are taken from U.S. Census Bureau ACS 2018 5yr estimates.
 
 The event risk concept was developed by
 [Joshua Weitz](https://biosciences.gatech.edu/people/joshua-weitz) (Georgia Institute of Technology, Biological Sciences, GT-BIOS).
@@ -17,23 +19,34 @@ npm i @bitscheme/covid-19-event-risk
 
 For your GCP project, ensure you have enabled the [BiqQuery API](https://console.cloud.google.com/flows/enableapi?apiid=bigquery)
 
-## Example Usage
+## Example
 
 ```js
-import calcRisk from "@bitscheme/covid-19-event-risk"
+import { calcRisk, query, getCases } from "@bitscheme/covid-19-event-risk"
 
-calcRisk(
-  bigQueryOptions: {
-    keyFilename: "/path/to/gcp_key_file.json",
+// extracts cases and population data from BigQuery
+const data = await query(
+  {
+    keyFile: "/path/to/gcp_key_file.json",
     projectId: "my_gcp_project_id",
   },
-  date: new Date(),
-  groupSize: 100,
-  level1: "OK",
-  level2: "Tulsa County",
+  "OK",
+  "Tulsa County",
+  14
 )
-  .then(({ score }) => console.log("risk score", score))
-  .catch((e) => console.log(e.message))
+
+// determines the target (t-0) and prior (t-14) cases in the 14 day period
+const { target, prior } = await getCases(new Date(), data, 14)
+
+// calculates risk score
+const score = calcRisk(
+  target.cumulative_confirmed - prior.cumulative_confirmed,
+  1000, // group size
+  target.total_pop, // county population
+  5, // ascertainment bias
+  10, // infectious period in days
+  14 // period in days
+)
 ```
 
 ## Unit Test
