@@ -5,7 +5,7 @@ Estimates the chance (0-100%) that at least one COVID-19 positive individual wil
 County population data taken from U.S. Census Bureau ACS 2018 5yr estimates.
 
 The event risk concept was developed by
-[Joshua Weitz](http://ecotheory.biology.gatech.edu/) (Georgia Institute of Technology, Biological Sciences, GT-BIOS).
+[Joshua Weitz](https://biosciences.gatech.edu/people/joshua-weitz) (Georgia Institute of Technology, Biological Sciences, GT-BIOS).
 
 The event risk calculation is taken from from the [COVID-19 Event Risk Planner](https://github.com/appliedbinf/covid19-event-risk-planner).
 
