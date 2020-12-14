@@ -1,6 +1,8 @@
 # COVID-19 Event Risk
 
-Estimates the chance (0-100%) that at least one COVID-19 positive individual will be present at an event on a given date. Historical and forecasted U.S. infection case data is extracted from the [Google COVID-19 Open Data dataset](https://cloud.google.com/blog/products/data-analytics/free-public-datasets-for-covid19) using BigQuery.
+Estimates the chance (0-100%) that at least one COVID-19 positive individual will be present at an event on a given date. Historical and forecasted U.S. infection cases data is extracted from the [Google COVID-19 Open Data dataset](https://cloud.google.com/blog/products/data-analytics/free-public-datasets-for-covid19) using BigQuery.
+
+County population data taken from U.S. Census Bureau ACS 2018 5yr estimates.
 
 The event risk concept was developed by
 [Joshua Weitz](http://ecotheory.biology.gatech.edu/) (Georgia Institute of Technology, Biological Sciences, GT-BIOS).
@@ -46,3 +48,8 @@ EOM
 yarn
 yarn test
 ```
+
+## Tasks
+
+- [ ] Support historical cases data queries
+- [ ] Publish package to npm
