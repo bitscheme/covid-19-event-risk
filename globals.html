@@ -1,0 +1,872 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>covid-19-event-risk</title>
+	<meta name="description" content="Documentation for covid-19-event-risk">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">covid-19-event-risk</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1>covid-19-event-risk</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Variables</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-variable"><a href="globals.html#ymd" class="tsd-kind-icon">YMD</a></li>
+								<li class="tsd-kind-variable"><a href="globals.html#notfoundmessage" class="tsd-kind-icon">not<wbr>Found<wbr>Message</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function"><a href="globals.html#calcrisk" class="tsd-kind-icon">calc<wbr>Risk</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#getcases" class="tsd-kind-icon">get<wbr>Cases</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Object literals</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-object-literal"><a href="globals.html#united_states_codes" class="tsd-kind-icon">UNITED_<wbr>STATES_<wbr>CODES</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Variables</h2>
+				<section class="tsd-panel tsd-member tsd-kind-variable">
+					<a name="ymd" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> YMD</h3>
+					<div class="tsd-signature tsd-kind-icon">YMD<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"YYYY-MM-DD"</span><span class="tsd-signature-symbol"> = &quot;YYYY-MM-DD&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/get-cases.ts#L8">lib/get-cases.ts:8</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable">
+					<a name="notfoundmessage" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> not<wbr>Found<wbr>Message</h3>
+					<div class="tsd-signature tsd-kind-icon">not<wbr>Found<wbr>Message<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"No data found in dataset"</span><span class="tsd-signature-symbol"> = &quot;No data found in dataset&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/get-cases.ts#L7">lib/get-cases.ts:7</a></li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="calcrisk" class="tsd-anchor"></a>
+					<h3>calc<wbr>Risk</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">calc<wbr>Risk<span class="tsd-signature-symbol">(</span>i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, size<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, pop<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, bias<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, ip<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, period<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/calc-risk.ts#L12">lib/calc-risk.ts:12</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>From <a href="https://github.com/appliedbinf/covid19-event-risk-planner">https://github.com/appliedbinf/covid19-event-risk-planner</a></p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>i: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>infections</p>
+									</div>
+								</li>
+								<li>
+									<h5>size: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>group size</p>
+									</div>
+								</li>
+								<li>
+									<h5>pop: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>population</p>
+									</div>
+								</li>
+								<li>
+									<h5>bias: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>ascertainment bias</p>
+									</div>
+								</li>
+								<li>
+									<h5>ip: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>infectious period</p>
+									</div>
+								</li>
+								<li>
+									<h5>period: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>number of days</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<p>The risk percentage</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="getcases" class="tsd-anchor"></a>
+					<h3>get<wbr>Cases</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Cases<span class="tsd-signature-symbol">(</span>date<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span>, cases<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Cases</span><span class="tsd-signature-symbol">[]</span>, period<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">14</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span>prior<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Cases</span><span class="tsd-signature-symbol">; </span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Cases</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/get-cases.ts#L18">lib/get-cases.ts:18</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Determines the target and prior cases data from a set of cases</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>date: <span class="tsd-signature-type">Date</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The target date in UTC</p>
+									</div>
+								</li>
+								<li>
+									<h5>cases: <span class="tsd-signature-type">Cases</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The cases dataset</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> period: <span class="tsd-signature-type">14</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The number of days in the period</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span>prior<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Cases</span><span class="tsd-signature-symbol">; </span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Cases</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>The result</p>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Object literals</h2>
+				<section class="tsd-panel tsd-member tsd-kind-object-literal">
+					<a name="united_states_codes" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> UNITED_<wbr>STATES_<wbr>CODES</h3>
+					<div class="tsd-signature tsd-kind-icon">UNITED_<wbr>STATES_<wbr>CODES<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L1">lib/constants.ts:1</a></li>
+						</ul>
+					</aside>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.ak" class="tsd-anchor"></a>
+						<h3>AK</h3>
+						<div class="tsd-signature tsd-kind-icon">AK<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Alaska&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L3">lib/constants.ts:3</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.al" class="tsd-anchor"></a>
+						<h3>AL</h3>
+						<div class="tsd-signature tsd-kind-icon">AL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Alabama&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L2">lib/constants.ts:2</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.ar" class="tsd-anchor"></a>
+						<h3>AR</h3>
+						<div class="tsd-signature tsd-kind-icon">AR<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Arkansas&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L6">lib/constants.ts:6</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.as" class="tsd-anchor"></a>
+						<h3>AS</h3>
+						<div class="tsd-signature tsd-kind-icon">AS<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;American Samoa&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L4">lib/constants.ts:4</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.az" class="tsd-anchor"></a>
+						<h3>AZ</h3>
+						<div class="tsd-signature tsd-kind-icon">AZ<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Arizona&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L5">lib/constants.ts:5</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.ca" class="tsd-anchor"></a>
+						<h3>CA</h3>
+						<div class="tsd-signature tsd-kind-icon">CA<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;California&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L7">lib/constants.ts:7</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.co" class="tsd-anchor"></a>
+						<h3>CO</h3>
+						<div class="tsd-signature tsd-kind-icon">CO<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Colorado&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L8">lib/constants.ts:8</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.ct" class="tsd-anchor"></a>
+						<h3>CT</h3>
+						<div class="tsd-signature tsd-kind-icon">CT<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Connecticut&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L9">lib/constants.ts:9</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.dc" class="tsd-anchor"></a>
+						<h3>DC</h3>
+						<div class="tsd-signature tsd-kind-icon">DC<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;District of Columbia&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L11">lib/constants.ts:11</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.de" class="tsd-anchor"></a>
+						<h3>DE</h3>
+						<div class="tsd-signature tsd-kind-icon">DE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Delaware&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L10">lib/constants.ts:10</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.fl" class="tsd-anchor"></a>
+						<h3>FL</h3>
+						<div class="tsd-signature tsd-kind-icon">FL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Florida&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L13">lib/constants.ts:13</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.fm" class="tsd-anchor"></a>
+						<h3>FM</h3>
+						<div class="tsd-signature tsd-kind-icon">FM<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Federated States of Micronesia&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L12">lib/constants.ts:12</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.ga" class="tsd-anchor"></a>
+						<h3>GA</h3>
+						<div class="tsd-signature tsd-kind-icon">GA<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Georgia&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L14">lib/constants.ts:14</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.gu" class="tsd-anchor"></a>
+						<h3>GU</h3>
+						<div class="tsd-signature tsd-kind-icon">GU<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Guam&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L15">lib/constants.ts:15</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.hi" class="tsd-anchor"></a>
+						<h3>HI</h3>
+						<div class="tsd-signature tsd-kind-icon">HI<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Hawaii&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L16">lib/constants.ts:16</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.ia" class="tsd-anchor"></a>
+						<h3>IA</h3>
+						<div class="tsd-signature tsd-kind-icon">IA<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Iowa&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L20">lib/constants.ts:20</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.id" class="tsd-anchor"></a>
+						<h3>ID</h3>
+						<div class="tsd-signature tsd-kind-icon">ID<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Idaho&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L17">lib/constants.ts:17</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.il" class="tsd-anchor"></a>
+						<h3>IL</h3>
+						<div class="tsd-signature tsd-kind-icon">IL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Illinois&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L18">lib/constants.ts:18</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.in" class="tsd-anchor"></a>
+						<h3>IN</h3>
+						<div class="tsd-signature tsd-kind-icon">IN<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Indiana&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L19">lib/constants.ts:19</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.ks" class="tsd-anchor"></a>
+						<h3>KS</h3>
+						<div class="tsd-signature tsd-kind-icon">KS<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Kansas&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L21">lib/constants.ts:21</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.ky" class="tsd-anchor"></a>
+						<h3>KY</h3>
+						<div class="tsd-signature tsd-kind-icon">KY<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Kentucky&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L22">lib/constants.ts:22</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.la" class="tsd-anchor"></a>
+						<h3>LA</h3>
+						<div class="tsd-signature tsd-kind-icon">LA<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Louisiana&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L23">lib/constants.ts:23</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.ma" class="tsd-anchor"></a>
+						<h3>MA</h3>
+						<div class="tsd-signature tsd-kind-icon">MA<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Massachusetts&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L27">lib/constants.ts:27</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.md" class="tsd-anchor"></a>
+						<h3>MD</h3>
+						<div class="tsd-signature tsd-kind-icon">MD<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Maryland&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L26">lib/constants.ts:26</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.me" class="tsd-anchor"></a>
+						<h3>ME</h3>
+						<div class="tsd-signature tsd-kind-icon">ME<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Maine&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L24">lib/constants.ts:24</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.mh" class="tsd-anchor"></a>
+						<h3>MH</h3>
+						<div class="tsd-signature tsd-kind-icon">MH<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Marshall Islands&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L25">lib/constants.ts:25</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.mi" class="tsd-anchor"></a>
+						<h3>MI</h3>
+						<div class="tsd-signature tsd-kind-icon">MI<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Michigan&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L28">lib/constants.ts:28</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.mn" class="tsd-anchor"></a>
+						<h3>MN</h3>
+						<div class="tsd-signature tsd-kind-icon">MN<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Minnesota&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L29">lib/constants.ts:29</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.mo" class="tsd-anchor"></a>
+						<h3>MO</h3>
+						<div class="tsd-signature tsd-kind-icon">MO<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Missouri&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L31">lib/constants.ts:31</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.mp" class="tsd-anchor"></a>
+						<h3>MP</h3>
+						<div class="tsd-signature tsd-kind-icon">MP<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Northern Mariana Islands&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L41">lib/constants.ts:41</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.ms" class="tsd-anchor"></a>
+						<h3>MS</h3>
+						<div class="tsd-signature tsd-kind-icon">MS<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Mississippi&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L30">lib/constants.ts:30</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.mt" class="tsd-anchor"></a>
+						<h3>MT</h3>
+						<div class="tsd-signature tsd-kind-icon">MT<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Montana&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L32">lib/constants.ts:32</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.nc" class="tsd-anchor"></a>
+						<h3>NC</h3>
+						<div class="tsd-signature tsd-kind-icon">NC<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;North Carolina&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L39">lib/constants.ts:39</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.nd" class="tsd-anchor"></a>
+						<h3>ND</h3>
+						<div class="tsd-signature tsd-kind-icon">ND<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;North Dakota&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L40">lib/constants.ts:40</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.ne" class="tsd-anchor"></a>
+						<h3>NE</h3>
+						<div class="tsd-signature tsd-kind-icon">NE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Nebraska&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L33">lib/constants.ts:33</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.nh" class="tsd-anchor"></a>
+						<h3>NH</h3>
+						<div class="tsd-signature tsd-kind-icon">NH<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;New Hampshire&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L35">lib/constants.ts:35</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.nj" class="tsd-anchor"></a>
+						<h3>NJ</h3>
+						<div class="tsd-signature tsd-kind-icon">NJ<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;New Jersey&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L36">lib/constants.ts:36</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.nm" class="tsd-anchor"></a>
+						<h3>NM</h3>
+						<div class="tsd-signature tsd-kind-icon">NM<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;New Mexico&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L37">lib/constants.ts:37</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.nv" class="tsd-anchor"></a>
+						<h3>NV</h3>
+						<div class="tsd-signature tsd-kind-icon">NV<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Nevada&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L34">lib/constants.ts:34</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.ny" class="tsd-anchor"></a>
+						<h3>NY</h3>
+						<div class="tsd-signature tsd-kind-icon">NY<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;New York&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L38">lib/constants.ts:38</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.oh" class="tsd-anchor"></a>
+						<h3>OH</h3>
+						<div class="tsd-signature tsd-kind-icon">OH<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Ohio&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L42">lib/constants.ts:42</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.ok" class="tsd-anchor"></a>
+						<h3>OK</h3>
+						<div class="tsd-signature tsd-kind-icon">OK<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Oklahoma&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L43">lib/constants.ts:43</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.or" class="tsd-anchor"></a>
+						<h3>OR</h3>
+						<div class="tsd-signature tsd-kind-icon">OR<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Oregon&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L44">lib/constants.ts:44</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.pa" class="tsd-anchor"></a>
+						<h3>PA</h3>
+						<div class="tsd-signature tsd-kind-icon">PA<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Pennsylvania&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L46">lib/constants.ts:46</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.pr" class="tsd-anchor"></a>
+						<h3>PR</h3>
+						<div class="tsd-signature tsd-kind-icon">PR<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Puerto Rico&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L47">lib/constants.ts:47</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.pw" class="tsd-anchor"></a>
+						<h3>PW</h3>
+						<div class="tsd-signature tsd-kind-icon">PW<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Palau&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L45">lib/constants.ts:45</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.ri" class="tsd-anchor"></a>
+						<h3>RI</h3>
+						<div class="tsd-signature tsd-kind-icon">RI<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Rhode Island&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L48">lib/constants.ts:48</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.sc" class="tsd-anchor"></a>
+						<h3>SC</h3>
+						<div class="tsd-signature tsd-kind-icon">SC<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;South Carolina&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L49">lib/constants.ts:49</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.sd" class="tsd-anchor"></a>
+						<h3>SD</h3>
+						<div class="tsd-signature tsd-kind-icon">SD<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;South Dakota&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L50">lib/constants.ts:50</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.tn" class="tsd-anchor"></a>
+						<h3>TN</h3>
+						<div class="tsd-signature tsd-kind-icon">TN<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Tennessee&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L51">lib/constants.ts:51</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.tx" class="tsd-anchor"></a>
+						<h3>TX</h3>
+						<div class="tsd-signature tsd-kind-icon">TX<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Texas&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L52">lib/constants.ts:52</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.ut" class="tsd-anchor"></a>
+						<h3>UT</h3>
+						<div class="tsd-signature tsd-kind-icon">UT<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Utah&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L53">lib/constants.ts:53</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.va" class="tsd-anchor"></a>
+						<h3>VA</h3>
+						<div class="tsd-signature tsd-kind-icon">VA<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Virginia&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L56">lib/constants.ts:56</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.vi" class="tsd-anchor"></a>
+						<h3>VI</h3>
+						<div class="tsd-signature tsd-kind-icon">VI<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Virgin Islands&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L55">lib/constants.ts:55</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.vt" class="tsd-anchor"></a>
+						<h3>VT</h3>
+						<div class="tsd-signature tsd-kind-icon">VT<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Vermont&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L54">lib/constants.ts:54</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.wa" class="tsd-anchor"></a>
+						<h3>WA</h3>
+						<div class="tsd-signature tsd-kind-icon">WA<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Washington&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L57">lib/constants.ts:57</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.wi" class="tsd-anchor"></a>
+						<h3>WI</h3>
+						<div class="tsd-signature tsd-kind-icon">WI<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Wisconsin&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L59">lib/constants.ts:59</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.wv" class="tsd-anchor"></a>
+						<h3>WV</h3>
+						<div class="tsd-signature tsd-kind-icon">WV<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;West Virginia&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L58">lib/constants.ts:58</a></li>
+							</ul>
+						</aside>
+					</section>
+					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
+						<a name="united_states_codes.wy" class="tsd-anchor"></a>
+						<h3>WY</h3>
+						<div class="tsd-signature tsd-kind-icon">WY<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;Wyoming&quot;</span></div>
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/constants.ts#L60">lib/constants.ts:60</a></li>
+							</ul>
+						</aside>
+					</section>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals current ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#ymd" class="tsd-kind-icon">YMD</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#notfoundmessage" class="tsd-kind-icon">not<wbr>Found<wbr>Message</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#calcrisk" class="tsd-kind-icon">calc<wbr>Risk</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#getcases" class="tsd-kind-icon">get<wbr>Cases</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#united_states_codes" class="tsd-kind-icon">UNITED_<wbr>STATES_<wbr>CODES</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

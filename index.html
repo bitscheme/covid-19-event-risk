@@ -1,0 +1,172 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>covid-19-event-risk</title>
+	<meta name="description" content="Documentation for covid-19-event-risk">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">covid-19-event-risk</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1>covid-19-event-risk</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#covid-19-event-risk" id="covid-19-event-risk" style="color: inherit; text-decoration: none;">
+					<h1>COVID-19 Event Risk</h1>
+				</a>
+				<p>This repository provides a TypeScript module to estimate the chance (0-100%) that at least one COVID-19 positive individual will be present at an event on a given date.</p>
+				<p>Historical and forecasted U.S. infection cases data are extracted from the <a href="https://cloud.google.com/blog/products/data-analytics/free-public-datasets-for-covid19">Google COVID-19 Open Data dataset</a> using BigQuery.</p>
+				<p>County population data are taken from U.S. Census Bureau ACS 2018 5yr estimates.</p>
+				<p>The event risk concept was developed by
+				<a href="https://biosciences.gatech.edu/people/joshua-weitz">Joshua Weitz</a> (Georgia Institute of Technology, Biological Sciences, GT-BIOS).</p>
+				<p>The event risk calculation is taken from from the <a href="https://github.com/appliedbinf/covid19-event-risk-planner">COVID-19 Event Risk Planner</a>.</p>
+				<a href="#install" id="install" style="color: inherit; text-decoration: none;">
+					<h2>Install</h2>
+				</a>
+				<pre><code class="language-sh">npm i @bitscheme/covid-19-event-risk</code></pre>
+				<p>For your GCP project, ensure you have enabled the <a href="https://console.cloud.google.com/flows/enableapi?apiid=bigquery">BiqQuery API</a></p>
+				<a href="#example" id="example" style="color: inherit; text-decoration: none;">
+					<h2>Example</h2>
+				</a>
+				<pre><code class="language-js"><span class="hljs-keyword">import</span> { calcRisk, query, getCases } <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;@bitscheme/covid-19-event-risk&quot;</span>
+
+<span class="hljs-comment">// extracts cases and population data from BigQuery</span>
+<span class="hljs-keyword">const</span> data = <span class="hljs-keyword">await</span> query(
+  {
+    <span class="hljs-attr">keyFile</span>: <span class="hljs-string">&quot;/path/to/gcp_key_file.json&quot;</span>,
+    <span class="hljs-attr">projectId</span>: <span class="hljs-string">&quot;my_gcp_project_id&quot;</span>,
+  },
+  <span class="hljs-string">&quot;OK&quot;</span>,
+  <span class="hljs-string">&quot;Tulsa County&quot;</span>,
+  <span class="hljs-number">14</span>
+)
+
+<span class="hljs-comment">// determines the target (t-0) and prior (t-14) cases in the 14 day period</span>
+<span class="hljs-keyword">const</span> { target, prior } = <span class="hljs-keyword">await</span> getCases(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(), data, <span class="hljs-number">14</span>)
+
+<span class="hljs-comment">// calculates risk score</span>
+<span class="hljs-keyword">const</span> score = calcRisk(
+  target.cumulative_confirmed - prior.cumulative_confirmed,
+  <span class="hljs-number">1000</span>, <span class="hljs-comment">// group size</span>
+  target.total_pop, <span class="hljs-comment">// county population</span>
+  <span class="hljs-number">5</span>, <span class="hljs-comment">// ascertainment bias</span>
+  <span class="hljs-number">10</span>, <span class="hljs-comment">// infectious period in days</span>
+  <span class="hljs-number">14</span> <span class="hljs-comment">// period in days</span>
+)</code></pre>
+				<a href="#unit-test" id="unit-test" style="color: inherit; text-decoration: none;">
+					<h2>Unit Test</h2>
+				</a>
+				<pre><code class="language-sh">git <span class="hljs-built_in">clone</span> https://github.com/bitscheme/covid-19-event-risk
+<span class="hljs-built_in">cd</span> covid-19-event-risk
+cat &gt; .env &lt;&lt;- <span class="hljs-string">EOM
+GCP_PROJECT_ID=my_gcp_project_id
+GCP_KEY_FILE=/path/to/gcp_key_file.json
+EOM</span>
+yarn
+yarn <span class="hljs-built_in">test</span></code></pre>
+				<a href="#tasks" id="tasks" style="color: inherit; text-decoration: none;">
+					<h2>Tasks</h2>
+				</a>
+				<ul>
+					<li><input disabled="" type="checkbox"> Support historical cases data queries</li>
+					<li><input disabled="" type="checkbox"> Publish package to npm</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#ymd" class="tsd-kind-icon">YMD</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#notfoundmessage" class="tsd-kind-icon">not<wbr>Found<wbr>Message</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#calcrisk" class="tsd-kind-icon">calc<wbr>Risk</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#getcases" class="tsd-kind-icon">get<wbr>Cases</a>
+					</li>
+					<li class=" tsd-kind-object-literal">
+						<a href="globals.html#united_states_codes" class="tsd-kind-icon">UNITED_<wbr>STATES_<wbr>CODES</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
