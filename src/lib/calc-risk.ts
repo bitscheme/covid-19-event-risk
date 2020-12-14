@@ -1,5 +1,6 @@
 /**
  * From https://github.com/appliedbinf/covid19-event-risk-planner
+ *
  * @param i infections
  * @param size group size
  * @param pop population

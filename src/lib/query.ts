@@ -1,36 +1,28 @@
 // @ts-check
-import { BigQuery, BigQueryDate, BigQueryOptions } from "@google-cloud/bigquery"
-
+import { BigQuery, BigQueryOptions } from "@google-cloud/bigquery"
+import { Cases } from "../types"
 import { UNITED_STATES_CODES } from "./constants"
 
-type ResultRow = {
-  // the observation date
-  date: BigQueryDate
-  // the date the forecast was published
-  forecast_date?: BigQueryDate
-  // fips code
-  county_fips_code: string
-  // total number of new cases
-  new_confirmed: number
-  // total cumulative number of confirmed cases
-  cumulative_confirmed: number
-  // county census population
-  total_pop: number
-}
-
 /**
- * Queries the most recently published Google COVID-19 open dataset data
+ * Queries Google COVID-19 open dataset data
  * for historical and forecasted cases in the United States
+ * The result set is a continuous series of observation dates representing
+ * new and cumulative cases, and if those cases were
+ *  - forecast by Google (forecast_date != null)
+ *  - reported by state county agencies (forecast_date = null)
+ *
+ * @param bigQueryOptions The BigQuery options
  * @param level1 The state abbreviation
  * @param level2 The county
- * @param period The number of days in the reporting window
+ * @param period The number of days in the window
+ * @returns The result
  */
 export default async (
   bigQueryOptions: BigQueryOptions,
   level1: string,
   level2: string,
   period: number
-): Promise<Array<ResultRow>> => {
+): Promise<Array<Cases>> => {
   const state = UNITED_STATES_CODES[level1]
   const sql = `
 DECLARE fips_code DEFAULT (
