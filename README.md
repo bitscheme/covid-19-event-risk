@@ -11,6 +11,10 @@ The event risk concept was developed by
 
 The event risk calculation is taken from from the [COVID-19 Event Risk Planner](https://github.com/appliedbinf/covid19-event-risk-planner).
 
+## Documentation
+
+[API](https://bitscheme.github.io/covid-19-event-risk/globals.html)
+
 ## Install
 
 ```sh

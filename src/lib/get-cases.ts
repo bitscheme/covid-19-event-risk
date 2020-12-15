@@ -1,6 +1,6 @@
 import dayjs, { Dayjs } from "dayjs"
 import utc from "dayjs/plugin/utc"
-import { Cases } from "../types"
+import { Cases } from "../lib/query"
 
 dayjs.extend(utc)
 

@@ -1,7 +1,23 @@
-// @ts-check
-import { BigQuery, BigQueryOptions } from "@google-cloud/bigquery"
-import { Cases } from "../types"
+import { BigQuery, BigQueryDate, BigQueryOptions } from "@google-cloud/bigquery"
 import { UNITED_STATES_CODES } from "./constants"
+
+/**
+ * The COVID-19 infection cases extracted from BigQuery
+ */
+export type Cases = {
+  // the observation date
+  date: BigQueryDate
+  // if cases have been forecasted, the date in which published
+  forecast_date?: BigQueryDate
+  // fips code
+  county_fips_code: string
+  // total number of new cases
+  new_confirmed: number
+  // total cumulative number of confirmed cases
+  cumulative_confirmed: number
+  // county census population
+  total_pop: number
+}
 
 /**
  * Queries Google COVID-19 open dataset data
@@ -17,12 +33,12 @@ import { UNITED_STATES_CODES } from "./constants"
  * @param period The number of days in the window
  * @returns The result
  */
-export default async (
+export default async function query(
   bigQueryOptions: BigQueryOptions,
   level1: string,
   level2: string,
   period: number
-): Promise<Array<Cases>> => {
+): Promise<Array<Cases>> {
   const state = UNITED_STATES_CODES[level1]
   const sql = `
 DECLARE fips_code DEFAULT (
