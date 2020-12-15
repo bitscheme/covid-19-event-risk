@@ -24,11 +24,11 @@ export default async function getCases(
     return d.set("h", 0).set("m", 0).set("s", 0).set("ms", 0)
   }
 
-  const findCaseByDate = (d: Dayjs) =>
+  const findCasesByDate = (d: Dayjs) =>
     cases.find(({ date }) => date.value === d.format(YMD))
 
   const targetDate = toMidnight(dayjs(date).utc())
-  const target = findCaseByDate(targetDate)
+  const target = findCasesByDate(targetDate)
 
   if (!target) {
     throw new Error(
@@ -37,7 +37,7 @@ export default async function getCases(
   }
 
   const priorDate = targetDate.add(-period, "d")
-  const prior = findCaseByDate(priorDate)
+  const prior = findCasesByDate(priorDate)
 
   if (!prior) {
     throw new Error(`${notFoundMessage} for [prior] ${priorDate.toISOString()}`)
