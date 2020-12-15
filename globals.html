@@ -68,6 +68,12 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
+							<h3>Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias"><a href="globals.html#cases" class="tsd-kind-icon">Cases</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
 							<h3>Variables</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-variable"><a href="globals.html#ymd" class="tsd-kind-icon">YMD</a></li>
@@ -79,6 +85,7 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function"><a href="globals.html#calcrisk" class="tsd-kind-icon">calc<wbr>Risk</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#getcases" class="tsd-kind-icon">get<wbr>Cases</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#query" class="tsd-kind-icon">query</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -87,6 +94,47 @@
 								<li class="tsd-kind-object-literal"><a href="globals.html#united_states_codes" class="tsd-kind-icon">UNITED_<wbr>STATES_<wbr>CODES</a></li>
 							</ul>
 						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="cases" class="tsd-anchor"></a>
+					<h3>Cases</h3>
+					<div class="tsd-signature tsd-kind-icon">Cases<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>county_fips_code<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>cumulative_confirmed<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>date<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BigQueryDate</span><span class="tsd-signature-symbol">; </span>forecast_date<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">BigQueryDate</span><span class="tsd-signature-symbol">; </span>new_confirmed<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>total_pop<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/query.ts#L7">lib/query.ts:7</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The COVID-19 infection cases extracted from BigQuery</p>
+						</div>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>county_<wbr>fips_<wbr>code<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>cumulative_<wbr>confirmed<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>date<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BigQueryDate</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> forecast_<wbr>date<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">BigQueryDate</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>new_<wbr>confirmed<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+							<li class="tsd-parameter">
+								<h5>total_<wbr>pop<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+							</li>
+						</ul>
 					</div>
 				</section>
 			</section>
@@ -181,7 +229,7 @@
 					<a name="getcases" class="tsd-anchor"></a>
 					<h3>get<wbr>Cases</h3>
 					<ul class="tsd-signatures tsd-kind-function">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Cases<span class="tsd-signature-symbol">(</span>date<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span>, cases<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Cases</span><span class="tsd-signature-symbol">[]</span>, period<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">14</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span>prior<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Cases</span><span class="tsd-signature-symbol">; </span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Cases</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Cases<span class="tsd-signature-symbol">(</span>date<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span>, cases<span class="tsd-signature-symbol">: </span><a href="globals.html#cases" class="tsd-signature-type">Cases</a><span class="tsd-signature-symbol">[]</span>, period<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">14</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span>prior<span class="tsd-signature-symbol">: </span><a href="globals.html#cases" class="tsd-signature-type">Cases</a><span class="tsd-signature-symbol">; </span>target<span class="tsd-signature-symbol">: </span><a href="globals.html#cases" class="tsd-signature-type">Cases</a><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -204,7 +252,7 @@
 									</div>
 								</li>
 								<li>
-									<h5>cases: <span class="tsd-signature-type">Cases</span><span class="tsd-signature-symbol">[]</span></h5>
+									<h5>cases: <a href="globals.html#cases" class="tsd-signature-type">Cases</a><span class="tsd-signature-symbol">[]</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The cases dataset</p>
 									</div>
@@ -216,7 +264,64 @@
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span>prior<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Cases</span><span class="tsd-signature-symbol">; </span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Cases</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span>prior<span class="tsd-signature-symbol">: </span><a href="globals.html#cases" class="tsd-signature-type">Cases</a><span class="tsd-signature-symbol">; </span>target<span class="tsd-signature-symbol">: </span><a href="globals.html#cases" class="tsd-signature-type">Cases</a><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>The result</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="query" class="tsd-anchor"></a>
+					<h3>query</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">query<span class="tsd-signature-symbol">(</span>bigQueryOptions<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BigQueryOptions</span>, level1<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, level2<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, period<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#cases" class="tsd-signature-type">Cases</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/bitscheme/covid-19-event-risk/blob/a375cbc/src/lib/query.ts#L36">lib/query.ts:36</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Queries Google COVID-19 open dataset data
+										for historical and forecasted cases in the United States
+										The result set is a continuous series of observation dates representing
+									new and cumulative cases, and if those cases were</p>
+									<ul>
+										<li>forecast by Google (forecast_date != null)</li>
+										<li>reported by state county agencies (forecast_date = null)</li>
+									</ul>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>bigQueryOptions: <span class="tsd-signature-type">BigQueryOptions</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The BigQuery options</p>
+									</div>
+								</li>
+								<li>
+									<h5>level1: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The state abbreviation</p>
+									</div>
+								</li>
+								<li>
+									<h5>level2: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The county</p>
+									</div>
+								</li>
+								<li>
+									<h5>period: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The number of days in the window</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#cases" class="tsd-signature-type">Cases</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
 							<p>The result</p>
 						</li>
 					</ul>
@@ -836,6 +941,9 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#cases" class="tsd-kind-icon">Cases</a>
+					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#ymd" class="tsd-kind-icon">YMD</a>
 					</li>
@@ -847,6 +955,9 @@
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#getcases" class="tsd-kind-icon">get<wbr>Cases</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#query" class="tsd-kind-icon">query</a>
 					</li>
 					<li class=" tsd-kind-object-literal">
 						<a href="globals.html#united_states_codes" class="tsd-kind-icon">UNITED_<wbr>STATES_<wbr>CODES</a>
