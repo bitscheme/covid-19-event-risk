@@ -14,10 +14,10 @@ export default function calcRisk(
   size: number,
   pop: number,
   bias: number,
-  ip: number,
-  period: number
+  ip = 10,
+  period = 14
 ): number {
-  const pI = ((i / pop) * bias * ip) / period
+  const pI = bias * ((i * ip) / period / pop)
   const r = 1 - Math.pow(1 - pI, size)
 
   return Math.round(r * 100)
